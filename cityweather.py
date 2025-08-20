@@ -20,6 +20,8 @@ if __name__ == "__main__":
     data = response.json()
     # print(response.status_code)
     if response.status_code != 200:
-        print(f"Error Code {response.status_code}")
+        print(f"Error Code {response.status_code}, Enter a Valid City")
     else:
-        print(f"temperature: {data['main']['temp']} degrees Celsius \nHumidity: {data['main']['humidity']}% \nDescription: {data['weather'][0]['description']}")
+        print(f"temperature: {data['main']['temp']} degrees Celsius")
+        print(f"Humidity: {data['main']['humidity']}%")
+        print(f"Description: {data['weather'][0]['description']}")
